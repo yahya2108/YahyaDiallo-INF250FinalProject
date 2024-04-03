@@ -1,0 +1,46 @@
+/* print.css */
+
+/* Reset and common styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Use a common font */
+}
+
+/* Adjustments for printing */
+body {
+  background: #fff; /* Change background to white for printing */
+}
+
+/* Hide header, footer, and other elements not needed in print */
+header, footer, .hidden-print {
+  display: none;
+}
+
+/* Adjust font sizes and colors for better print readability */
+h1, h2, h3, h4, h5, h6 {
+  color: #000; /* Set font color to black */
+}
+
+/* Example of how to show URLs for links */
+a:after {
+  content: " (" attr(href) ")";
+}
+
+/* Example of removing background colors from elements */
+.bg-green {
+  background-color: transparent !important;
+}
+
+/* Example of adjusting margins for better print layout */
+section {
+  padding: 1rem;
+}
+
+/* Example of setting a specific font size for printing */
+@media print {
+  h1 {
+    font-size: 24px;
+  }
+}
